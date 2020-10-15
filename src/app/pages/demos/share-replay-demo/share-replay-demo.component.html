@@ -1,0 +1,20 @@
+<button class="btn btn-lg btn-primary" (click)="start()">Obtener imagen</button>
+
+<div class="row mt-4">
+  <div class="col-12 col-sm-6">
+    <table class="table table-dark p-2">
+      <thead>
+        <tr>
+          <th>shareReplay</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let image of images">
+          <td>
+            <img [src]="image.message" width="100">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

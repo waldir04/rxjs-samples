@@ -1,0 +1,9 @@
+<ol>
+  <ng-container *ngFor="let route of routes">
+    <li>
+      <a [routerLink]="route.path">
+        {{ route.label | titlecase }}
+      </a>
+    </li>
+  </ng-container>
+</ol>

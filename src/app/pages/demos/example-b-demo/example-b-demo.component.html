@@ -1,0 +1,26 @@
+
+<div class="col-12 mt-4">
+  <input type="text" #inputSearch>
+</div>
+
+<div class="col-12 mt-4">
+  <h2>Resultados:</h2>
+
+  <ng-container *ngIf="!loading; else loadingAnimation">
+    <ul class="mt-2" *ngIf="countries.length > 0; else noResults">
+      <li *ngFor="let country of countries">
+        {{ country }}
+      </li>
+    </ul>
+  </ng-container>
+</div>
+
+<ng-template #noResults>
+  <h3 *ngIf="hasResults">Sin resultados.</h3>
+</ng-template>
+
+<ng-template #loadingAnimation>
+  <div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Cargando...</span>
+  </div>
+</ng-template>

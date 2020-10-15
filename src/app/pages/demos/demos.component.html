@@ -1,0 +1,15 @@
+<header>
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-text">
+      DEMO: {{ currentRoute.label | titlecase }}
+    </span>
+    <a class="ml-auto" routerLink="content" routerLinkActive="d-none">To content</a>
+  </nav>
+</header>
+<section class="container">
+  <div class="row">
+    <div class="col mt-4">
+      <router-outlet (activate)="setRouteConfig()"></router-outlet>
+    </div>
+  </div>
+</section>
